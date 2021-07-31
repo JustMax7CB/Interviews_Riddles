@@ -16,6 +16,8 @@ def Game():
             if peopleCount[index][0] != "Dead":
                 if index + 1 < len(peopleCount):
                     peopleCount[index + 1][0] = "Dead"
+                elif index + 1 == len(peopleCount):
+                    peopleCount[0][0] = "Dead"
             else:
                 continue
         peopleCount = [x for x in peopleCount if x[0] == "Alive"]
